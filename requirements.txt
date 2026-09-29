@@ -1,0 +1,11 @@
+# Versions will be pinned after the first reproducible PatchCore run.
+torch
+torchvision
+anomalib
+opencv-python
+numpy
+pandas
+matplotlib
+scikit-learn
+PyYAML
+tqdm

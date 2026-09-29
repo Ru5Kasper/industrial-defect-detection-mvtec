@@ -1,0 +1,12 @@
+# Initial experiment configuration. Tune only through versioned config changes.
+experiment_name: patchcore_pilot
+seed: 42
+dataset:
+  root: data/mvtec_ad
+  categories: [bottle, cable, carpet]
+  image_size: 256
+model:
+  name: patchcore
+evaluation:
+  save_visualizations: true
+  metrics: [image_auroc, pixel_auroc, aupro]

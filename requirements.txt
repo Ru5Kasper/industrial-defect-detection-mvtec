@@ -1,7 +1,6 @@
 # Versions will be pinned after the first reproducible PatchCore run.
 torch
 torchvision
-anomalib
 opencv-python
 numpy
 pandas

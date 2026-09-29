@@ -1,0 +1,18 @@
+experiment_name: padim_pilot
+seed: 42
+dataset:
+  root: data/mvtec_ad
+  categories: [bottle, cable, carpet]
+  image_size: 256
+  batch_size: 16
+  num_workers: 0
+model:
+  name: padim
+  backbone: resnet18
+  embedding_dim: 100
+  covariance_regularization: 0.01
+  pretrained: true
+evaluation:
+  save_visualizations: true
+  visualization_examples_per_type: 1
+  metrics: [image_auroc, pixel_auroc, aupro]

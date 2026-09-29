@@ -37,7 +37,18 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Пилотные эксперименты запускаются на категориях `bottle`, `cable` и `carpet`. Команды запуска будут добавлены после реализации модулей `src/train.py` и `src/infer.py`.
+Пилотные эксперименты запускаются на категориях `bottle`, `cable` и `carpet`.
+
+```bash
+# Обучение: используются только data/mvtec_ad/<category>/train/good
+python -m src.train_padim --config configs/padim.yaml
+
+# Оценка на штатном test и сохранение heatmap, масок и метрик
+python -m src.evaluate_padim --config configs/padim.yaml
+```
+
+Статистики PaDiM сохраняются в `artifacts/padim/`, визуализации — в
+`results/figures/padim/`, а метрики добавляются в `results/metrics.csv`.
 
 ## Метрики
 

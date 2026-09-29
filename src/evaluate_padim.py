@@ -122,9 +122,12 @@ def main() -> None:
     parser.add_argument("--config", default="configs/padim.yaml")
     parser.add_argument("--artifact-dir", default="artifacts/padim")
     parser.add_argument("--results-dir", default="results")
+    parser.add_argument("--data-root", help="Local MVTec AD root; overrides dataset.root in the config.")
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     arguments = parser.parse_args()
     config = load_config(arguments.config)
+    if arguments.data_root:
+        config["dataset"]["root"] = arguments.data_root
     seed_everything(config["seed"])
     for category in config["dataset"]["categories"]:
         row = evaluate_category(category, config, Path(arguments.artifact_dir), Path(arguments.results_dir), arguments.device)

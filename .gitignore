@@ -3,6 +3,7 @@ data/
 artifacts/
 checkpoints/
 work/
+results/figures/
 *.pt
 *.pth
 *.ckpt

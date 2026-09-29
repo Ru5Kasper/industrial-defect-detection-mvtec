@@ -63,9 +63,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Train PaDiM on MVTec AD normal images only.")
     parser.add_argument("--config", default="configs/padim.yaml")
     parser.add_argument("--output-dir", default="artifacts/padim")
+    parser.add_argument("--data-root", help="Local MVTec AD root; overrides dataset.root in the config.")
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     arguments = parser.parse_args()
     config = load_config(arguments.config)
+    if arguments.data_root:
+        config["dataset"]["root"] = arguments.data_root
     seed_everything(config["seed"])
     output_dir = Path(arguments.output_dir)
     for category in config["dataset"]["categories"]:

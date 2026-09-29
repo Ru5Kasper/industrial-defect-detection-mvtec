@@ -41,14 +41,18 @@ pip install -r requirements.txt
 
 ```bash
 # Обучение: используются только data/mvtec_ad/<category>/train/good
-python -m src.train_padim --config configs/padim.yaml
+python -m src.train_padim --config configs/padim.yaml --data-root "C:\\path\\to\\mvtec_ad"
 
 # Оценка на штатном test и сохранение heatmap, масок и метрик
-python -m src.evaluate_padim --config configs/padim.yaml
+python -m src.evaluate_padim --config configs/padim.yaml --data-root "C:\\path\\to\\mvtec_ad"
 ```
 
 Статистики PaDiM сохраняются в `artifacts/padim/`, визуализации — в
 `results/figures/padim/`, а метрики добавляются в `results/metrics.csv`.
+
+Результаты первого реального пилота на `bottle`, `cable` и `carpet` приведены
+в [reports/padim_pilot.md](reports/padim_pilot.md); компактные примеры карт
+аномалий находятся в `results/examples/`.
 
 ## Метрики
 

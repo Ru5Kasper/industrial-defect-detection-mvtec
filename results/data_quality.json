@@ -1,0 +1,434 @@
+{
+  "status": "ok",
+  "expected_categories": [
+    "bottle",
+    "cable",
+    "capsule",
+    "carpet",
+    "grid",
+    "hazelnut",
+    "leather",
+    "metal_nut",
+    "pill",
+    "screw",
+    "tile",
+    "toothbrush",
+    "transistor",
+    "wood",
+    "zipper"
+  ],
+  "found_categories": [
+    "bottle",
+    "cable",
+    "capsule",
+    "carpet",
+    "grid",
+    "hazelnut",
+    "leather",
+    "metal_nut",
+    "pill",
+    "screw",
+    "tile",
+    "toothbrush",
+    "transistor",
+    "wood",
+    "zipper"
+  ],
+  "unexpected_root_entries": [],
+  "totals": {
+    "train_good": 3629,
+    "test_good": 467,
+    "test_defect": 1258,
+    "test_total": 1725,
+    "mask_count": 1258
+  },
+  "checked": {
+    "images_read": 5354,
+    "masks_read": 1258,
+    "image_mask_pairs_checked": 1258
+  },
+  "critical_issues": [],
+  "warnings": [],
+  "missing_masks": [],
+  "extra_masks": [],
+  "unreadable_images": [],
+  "size_mismatches": [],
+  "empty_defect_masks": [],
+  "non_binary_masks": [],
+  "masks_for_good_images": [],
+  "non_square_images": [],
+  "unexpected_files": [],
+  "masks_empty_after_resize": [],
+  "per_category": {
+    "bottle": {
+      "image_modes": {
+        "RGB": 292
+      },
+      "image_sizes": {
+        "900x900": 292
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "cable": {
+      "image_modes": {
+        "RGB": 374
+      },
+      "image_sizes": {
+        "1024x1024": 374
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "capsule": {
+      "image_modes": {
+        "RGB": 351
+      },
+      "image_sizes": {
+        "1000x1000": 351
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "carpet": {
+      "image_modes": {
+        "RGB": 397
+      },
+      "image_sizes": {
+        "1024x1024": 397
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "grid": {
+      "image_modes": {
+        "L": 342
+      },
+      "image_sizes": {
+        "1024x1024": 342
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "hazelnut": {
+      "image_modes": {
+        "RGB": 501
+      },
+      "image_sizes": {
+        "1024x1024": 501
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "leather": {
+      "image_modes": {
+        "RGB": 369
+      },
+      "image_sizes": {
+        "1024x1024": 369
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "metal_nut": {
+      "image_modes": {
+        "RGB": 335
+      },
+      "image_sizes": {
+        "700x700": 335
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "pill": {
+      "image_modes": {
+        "RGB": 434
+      },
+      "image_sizes": {
+        "800x800": 434
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "screw": {
+      "image_modes": {
+        "L": 480
+      },
+      "image_sizes": {
+        "1024x1024": 480
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "tile": {
+      "image_modes": {
+        "RGB": 347
+      },
+      "image_sizes": {
+        "840x840": 347
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "toothbrush": {
+      "image_modes": {
+        "RGB": 102
+      },
+      "image_sizes": {
+        "1024x1024": 102
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "transistor": {
+      "image_modes": {
+        "RGB": 313
+      },
+      "image_sizes": {
+        "1024x1024": 313
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "wood": {
+      "image_modes": {
+        "RGB": 326
+      },
+      "image_sizes": {
+        "1024x1024": 326
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    },
+    "zipper": {
+      "image_modes": {
+        "L": 391
+      },
+      "image_sizes": {
+        "1024x1024": 391
+      },
+      "mask_values": [
+        0,
+        255
+      ],
+      "train_subdirs": [
+        "good"
+      ]
+    }
+  },
+  "loader_compatibility": {
+    "image_size": 256,
+    "train_contains_only_good": true,
+    "every_defect_image_has_mask": true,
+    "good_test_images_without_masks": true,
+    "all_images_square": true,
+    "grayscale_categories_converted_to_rgb": [
+      "grid",
+      "screw",
+      "zipper"
+    ],
+    "mixed_mode_categories": [],
+    "masks_binary_0_255": true,
+    "masks_empty_after_nearest_resize": 0,
+    "smallest_masks_after_resize": [
+      {
+        "mask": "capsule/ground_truth/crack/021_mask.png",
+        "defect_pixels": 371,
+        "defect_pixels_256": 28
+      },
+      {
+        "mask": "pill/ground_truth/color/009_mask.png",
+        "defect_pixels": 323,
+        "defect_pixels_256": 33
+      },
+      {
+        "mask": "capsule/ground_truth/poke/007_mask.png",
+        "defect_pixels": 695,
+        "defect_pixels_256": 42
+      },
+      {
+        "mask": "pill/ground_truth/color/000_mask.png",
+        "defect_pixels": 426,
+        "defect_pixels_256": 42
+      },
+      {
+        "mask": "capsule/ground_truth/crack/020_mask.png",
+        "defect_pixels": 684,
+        "defect_pixels_256": 44
+      }
+    ]
+  },
+  "gallery_examples": {
+    "bottle": [
+      {
+        "defect_type": "good",
+        "image": "bottle/test/good/000.png",
+        "mask": ""
+      },
+      {
+        "defect_type": "broken_large",
+        "image": "bottle/test/broken_large/000.png",
+        "mask": "bottle/ground_truth/broken_large/000_mask.png"
+      },
+      {
+        "defect_type": "broken_small",
+        "image": "bottle/test/broken_small/000.png",
+        "mask": "bottle/ground_truth/broken_small/000_mask.png"
+      },
+      {
+        "defect_type": "contamination",
+        "image": "bottle/test/contamination/000.png",
+        "mask": "bottle/ground_truth/contamination/000_mask.png"
+      }
+    ],
+    "cable": [
+      {
+        "defect_type": "good",
+        "image": "cable/test/good/000.png",
+        "mask": ""
+      },
+      {
+        "defect_type": "bent_wire",
+        "image": "cable/test/bent_wire/000.png",
+        "mask": "cable/ground_truth/bent_wire/000_mask.png"
+      },
+      {
+        "defect_type": "cable_swap",
+        "image": "cable/test/cable_swap/000.png",
+        "mask": "cable/ground_truth/cable_swap/000_mask.png"
+      },
+      {
+        "defect_type": "combined",
+        "image": "cable/test/combined/000.png",
+        "mask": "cable/ground_truth/combined/000_mask.png"
+      },
+      {
+        "defect_type": "cut_inner_insulation",
+        "image": "cable/test/cut_inner_insulation/000.png",
+        "mask": "cable/ground_truth/cut_inner_insulation/000_mask.png"
+      },
+      {
+        "defect_type": "cut_outer_insulation",
+        "image": "cable/test/cut_outer_insulation/000.png",
+        "mask": "cable/ground_truth/cut_outer_insulation/000_mask.png"
+      },
+      {
+        "defect_type": "missing_cable",
+        "image": "cable/test/missing_cable/000.png",
+        "mask": "cable/ground_truth/missing_cable/000_mask.png"
+      },
+      {
+        "defect_type": "missing_wire",
+        "image": "cable/test/missing_wire/000.png",
+        "mask": "cable/ground_truth/missing_wire/000_mask.png"
+      },
+      {
+        "defect_type": "poke_insulation",
+        "image": "cable/test/poke_insulation/000.png",
+        "mask": "cable/ground_truth/poke_insulation/000_mask.png"
+      }
+    ],
+    "carpet": [
+      {
+        "defect_type": "good",
+        "image": "carpet/test/good/000.png",
+        "mask": ""
+      },
+      {
+        "defect_type": "color",
+        "image": "carpet/test/color/000.png",
+        "mask": "carpet/ground_truth/color/000_mask.png"
+      },
+      {
+        "defect_type": "cut",
+        "image": "carpet/test/cut/000.png",
+        "mask": "carpet/ground_truth/cut/000_mask.png"
+      },
+      {
+        "defect_type": "hole",
+        "image": "carpet/test/hole/000.png",
+        "mask": "carpet/ground_truth/hole/000_mask.png"
+      },
+      {
+        "defect_type": "metal_contamination",
+        "image": "carpet/test/metal_contamination/000.png",
+        "mask": "carpet/ground_truth/metal_contamination/000_mask.png"
+      },
+      {
+        "defect_type": "thread",
+        "image": "carpet/test/thread/000.png",
+        "mask": "carpet/ground_truth/thread/000_mask.png"
+      }
+    ]
+  }
+}

@@ -163,6 +163,8 @@ class PatchCore(nn.Module):
         except TypeError:  # PyTorch versions before weights_only
             payload = torch.load(path, map_location=device)
         model = cls(device=device, pretrained=False, **payload["config"])
-        model.load_state_dict(payload["state_dict"])
+        state = payload["state_dict"]
+        model.memory_bank = state["memory_bank"].to(device)
+        model.load_state_dict(state)
         model.fitted = True
         return model

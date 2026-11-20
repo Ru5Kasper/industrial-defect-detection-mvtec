@@ -2,6 +2,8 @@
 import argparse
 import json
 import platform
+import shutil
+from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 import torch
 import torchvision
@@ -30,10 +32,17 @@ def main():
     set_seed(seed)
     out = Path(tc.get("artifacts_dir", "artifacts/patchcore"))
     out.mkdir(parents=True, exist_ok=True)
+    packages = {}
+    for package in ("torch", "torchvision", "numpy", "Pillow", "PyYAML", "scikit-learn", "opencv-python-headless", "matplotlib"):
+        try:
+            packages[package] = version(package)
+        except PackageNotFoundError:
+            packages[package] = "not-installed"
+    shutil.copy2(args.config, out / "patchcore.yaml")
     manifest = {"experiment_name": config.get("experiment_name", "patchcore"),
                 "data_root": str(root), "device": device, "seed": seed,
                 "python": platform.python_version(), "torch": torch.__version__,
-                "torchvision": torchvision.__version__, "categories": {}}
+                "torchvision": torchvision.__version__, "packages": packages, "categories": {}}
     for category in ds["categories"]:
         dataset = MVTecPatchDataset(root, category, ds.get("image_size", 256), train=True)
         loader = DataLoader(dataset, batch_size=tc.get("batch_size", 8), shuffle=False,

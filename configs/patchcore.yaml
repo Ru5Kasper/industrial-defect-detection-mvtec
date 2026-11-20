@@ -1,4 +1,3 @@
-# Initial experiment configuration. Tune only through versioned config changes.
 experiment_name: patchcore_pilot
 seed: 42
 dataset:
@@ -7,6 +6,19 @@ dataset:
   image_size: 256
 model:
   name: patchcore
+  coreset_ratio: 0.01
+  max_bank_size: 10000
+  nn_chunk_size: 2048
+  pretrained: true
+training:
+  batch_size: 8
+  num_workers: 0
+  device: auto
+  artifacts_dir: artifacts/patchcore
 evaluation:
+  batch_size: 1
+  num_workers: 0
+  results_dir: results
   save_visualizations: true
-  metrics: [image_auroc, pixel_auroc, aupro]
+  aupro_max_fpr: 0.30
+  aupro_thresholds: 300

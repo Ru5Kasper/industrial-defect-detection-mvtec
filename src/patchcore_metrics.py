@@ -41,7 +41,7 @@ def compute_aupro(masks, score_maps, max_fpr=0.30, thresholds=300):
         xs, ys = np.insert(xs, 0, 0.0), np.insert(ys, 0, 0.0)
     if xs[-1] < max_fpr:
         xs, ys = np.append(xs, max_fpr), np.append(ys, ys[-1])
-    return float(np.trapz(ys, xs) / max_fpr)
+    return float(np.trapezoid(ys, xs) / max_fpr)
 
 def evaluate(labels, image_scores, masks, score_maps):
     return {"image_auroc": safe_auc(labels, image_scores),

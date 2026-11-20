@@ -98,7 +98,7 @@ class PatchCore(nn.Module):
         set_seed(self.seed)
         feature_chunks = []
         for batch in train_loader:
-            images = batch[0] if isinstance(batch, (tuple, list)) else batch
+            images = batch["image"] if isinstance(batch, dict) else (batch[0] if isinstance(batch, (tuple, list)) else batch)
             descriptors = self.embed(images)
             feature_chunks.append(descriptors.reshape(-1, descriptors.shape[-1]).cpu())
         if not feature_chunks:
